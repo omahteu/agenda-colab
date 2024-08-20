@@ -358,8 +358,8 @@
                         <!-- <li class="sidebar-title">Raise Support</li> -->
 
                         <li class="sidebar-item  ">
-                            <a href="" class='sidebar-link'>
-                                <i class="bi bi-life-preserver"></i>
+                            <a href="" class='sidebar-link' id="logout-button">
+                                <i class="bi bi-puzzle"></i>
                                 <span>Sair</span>
                             </a>
                         </li>
@@ -412,11 +412,6 @@
                     <div class="row" id="table-hover-row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <input type="date" class="form-control" name="" id="">
-                                    </div>
-                                </div>
                                 <div class="card-content">
                                     <!-- table hover -->
                                     <div class="table-responsive">
@@ -424,12 +419,13 @@
                                             <thead>
                                                 <tr>
                                                     <th>Data</th>
-                                                    <th>Colaborador</th>
                                                     <th>Local</th>
+                                                    <th>Número</th>
                                                     <th>Horário</th>
+                                                    <th>Observações</th>
                                                 </tr>
                                             </thead>
-                                            <tbody></tbody>
+                                            <tbody id="meu-quadro"></tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -443,10 +439,12 @@
 
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../dist/assets/js/bootstrap.bundle.min.js"></script>
 
     <script src="../dist/assets/js/main.js"></script>
+    <script type="module" src="../js/leitura/meuquadro.js"></script>
 </body>
 
 </html>

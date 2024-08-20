@@ -360,8 +360,8 @@
                         <!-- <li class="sidebar-title">Raise Support</li> -->
 
                         <li class="sidebar-item  ">
-                            <a href="" class='sidebar-link'>
-                                <i class="bi bi-life-preserver"></i>
+                            <a href="" class='sidebar-link' id="logout-button">
+                                <i class="bi bi-puzzle"></i>
                                 <span>Sair</span>
                             </a>
                         </li>
@@ -683,13 +683,51 @@
 
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../dist/assets/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../dist/assets/vendors/apexcharts/apexcharts.js"></script>
-    <script src="../dist/assets/js/pages/dashboard.js"></script>
+    <!-- <script src="../dist/assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="../dist/assets/js/pages/dashboard.js"></script> -->
 
     <script src="../dist/assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Função para obter o valor de um cookie pelo nome
+            function getCookie(name) {
+                let value = "; " + document.cookie;
+                let parts = value.split("; " + name + "=");
+                if (parts.length == 2) return parts.pop().split(";").shift();
+            }
+
+            // Função para excluir um cookie pelo nome
+            function deleteCookie(name) {
+                document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+            }
+
+            // Ler o cookie 'user_id'
+            let userId = getCookie('user_id');
+
+            if (userId) {
+                console.log("User ID from cookie: " + userId);
+                // Aqui você pode usar o userId conforme necessário
+            } else {
+                console.log("No user ID found in cookies.");
+                window.location.href = '../index.html';
+            }
+
+            // Manipulador de clique para o botão de sair
+            $('#logout-button').on('click', function() {
+                // Excluir o cookie 'user_id'
+                deleteCookie('user_id');
+
+                window.location.href = '../index.html';
+            });
+        });
+    </script>
+
+    <script type="module" src="../js/gps/coleta.js"></script>
 </body>
 
 </html>
