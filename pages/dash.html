@@ -393,291 +393,31 @@
             </header>
 
             <div class="page-heading">
-                <h3>Bom dia, Natan</h3>
+                <h3>Bem-vindo, <span id="nomeusuario"></span></h3>
             </div>
             <div class="page-content">
                 <section class="row">
                     <div class="col-12 col-lg-12">
                         <div class="row">
-                            <div class="col-12 col-lg-12 col-md-12">
-                                <div class="card">
-                                    <div class="card-body px-3 py-4-5">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="stats-icon blue">
-                                                    <i class="iconly-boldLocation"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h6>Objetivo <span></span></h6>
-                                                <h6 class="font-extrabold mb-0"><a href="https://maps.app.goo.gl/E9F2fJErHQcs1cN58">Hospital São Vicente FUNEF</a></h6>
-                                                <span>08:00 às 12:00h</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-12 col-md-12">
-                                <div class="card">
-                                    <div class="card-body px-3 py-4-5">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="stats-icon blue">
-                                                    <i class="iconly-boldLocation"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h6>Objetivo <span></span></h6>
-                                                <h6 class="font-extrabold mb-0"><a href="https://maps.app.goo.gl/pnF77vcHqSsNhsGh7">Hospital de Clínicas</a></h6>
-                                                <span>13:00 às 15:00h</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="col-6 col-lg-3 col-md-6">
-                                <div class="card">
-                                    <div class="card-body px-3 py-4-5">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="stats-icon purple">
-                                                    <i class="iconly-boldLocation"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h6 class="text-muted font-semibold">Maria Joana</h6>
-                                                <h6 class="font-extrabold mb-0"><a href="https://www.google.com/maps/place/Parque+Barigui/@-25.4267589,-49.3098901,17z/data=!3m1!4b1!4m6!3m5!1s0x94dce3df88cb5fa7:0x64ed421a45cf1e53!8m2!3d-25.4267589!4d-49.3073152!16s%2Fg%2F122r7ds4?entry=ttu">Parque Barigui</a></h6>
-                                                <span>Atualizado às 12:43h</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3 col-md-6">
-                                <div class="card">
-                                    <div class="card-body px-3 py-4-5">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="stats-icon blue">
-                                                    <i class="iconly-boldLocation"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h6 class="text-muted font-semibold">André Alves</h6>
-                                                <h6 class="font-extrabold mb-0"><a href="https://www.google.com/maps/place/Shopping+Esta%C3%A7%C3%A3o/@-25.4381598,-49.2699732,17z/data=!3m2!4b1!5s0x94dce4688848825b:0x5413612e90a6da5c!4m6!3m5!1s0x94dce468ed54b4bf:0x4f96264373029feb!8m2!3d-25.4381598!4d-49.2673983!16s%2Fg%2F121yygl1?entry=ttu">Shopping Estação</a></h6>
-                                                <span>Atualizado às 12:43h</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3 col-md-6">
-                                <div class="card">
-                                    <div class="card-body px-3 py-4-5">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="stats-icon purple">
-                                                    <i class="iconly-boldLocation"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h6 class="text-muted font-semibold">Ana Maria</h6>
-                                                <h6 class="font-extrabold mb-0"><a href="https://www.google.com/maps/place/Ligga+Arena/@-25.4482116,-49.2795615,17z/data=!3m1!4b1!4m6!3m5!1s0x94dce476c516477b:0x4d03657ac0bc148c!8m2!3d-25.4482116!4d-49.2769866!16zL20vMDdibTRw?entry=ttu">Ligga Arena</a></h6>
-                                                <span>Atualizado às 12:43h</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
-                        <!-- <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Profile Visit</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="chart-profile-visit"></div>
-                                    </div>
-                                </div>
+                            <div class="table-responsive table-wrapper">
+                                <table class="table table-hover mb-0" id="tabela_agenda_diaria">
+                                    <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Hora Início</th>
+                                            <th>Hora Fim</th>
+                                            <th>Médico</th>
+                                            <th>Hospital</th>
+                                            <th>Material</th>
+                                            <th>Convênio</th>
+                                            <th>Observações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="minhagendadiaria"></tbody>
+                                </table>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-12 col-xl-4">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Profile Visit</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="d-flex align-items-center">
-                                                    <svg class="bi text-primary" width="32" height="32" fill="blue"
-                                                        style="width:10px">
-                                                        <use
-                                                            xlink:href="./dist/assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                    </svg>
-                                                    <h5 class="mb-0 ms-3">Europe</h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <h5 class="mb-0">862</h5>
-                                            </div>
-                                            <div class="col-12">
-                                                <div id="chart-europe"></div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="d-flex align-items-center">
-                                                    <svg class="bi text-success" width="32" height="32" fill="blue"
-                                                        style="width:10px">
-                                                        <use
-                                                            xlink:href="./dist/assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                    </svg>
-                                                    <h5 class="mb-0 ms-3">America</h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <h5 class="mb-0">375</h5>
-                                            </div>
-                                            <div class="col-12">
-                                                <div id="chart-america"></div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="d-flex align-items-center">
-                                                    <svg class="bi text-danger" width="32" height="32" fill="blue"
-                                                        style="width:10px">
-                                                        <use
-                                                            xlink:href="./dist/assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                    </svg>
-                                                    <h5 class="mb-0 ms-3">Indonesia</h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <h5 class="mb-0">1025</h5>
-                                            </div>
-                                            <div class="col-12">
-                                                <div id="chart-indonesia"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-xl-8">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Latest Comments</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover table-lg">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Name</th>
-                                                        <th>Comment</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar avatar-md">
-                                                                    <img src="./dist/assets/images/faces/5.jpg">
-                                                                </div>
-                                                                <p class="font-bold ms-3 mb-0">Si Cantik</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">Congratulations on your graduation!</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar avatar-md">
-                                                                    <img src="./dist/assets/images/faces/2.jpg">
-                                                                </div>
-                                                                <p class="font-bold ms-3 mb-0">Si Ganteng</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">Wow amazing design! Can you make another
-                                                                tutorial for
-                                                                this design?</p>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
-                    <!-- <div class="col-12 col-lg-3">
-                        <div class="card">
-                            <div class="card-body py-4 px-5">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-xl">
-                                        <img src="./dist/assets/images/faces/1.jpg" alt="Face 1">
-                                    </div>
-                                    <div class="ms-3 name">
-                                        <h5 class="font-bold">John Duck</h5>
-                                        <h6 class="text-muted mb-0">@johnducky</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Recent Messages</h4>
-                            </div>
-                            <div class="card-content pb-4">
-                                <div class="recent-message d-flex px-4 py-3">
-                                    <div class="avatar avatar-lg">
-                                        <img src="./dist/assets/images/faces/4.jpg">
-                                    </div>
-                                    <div class="name ms-4">
-                                        <h5 class="mb-1">Hank Schrader</h5>
-                                        <h6 class="text-muted mb-0">@johnducky</h6>
-                                    </div>
-                                </div>
-                                <div class="recent-message d-flex px-4 py-3">
-                                    <div class="avatar avatar-lg">
-                                        <img src="./dist/assets/images/faces/5.jpg">
-                                    </div>
-                                    <div class="name ms-4">
-                                        <h5 class="mb-1">Dean Winchester</h5>
-                                        <h6 class="text-muted mb-0">@imdean</h6>
-                                    </div>
-                                </div>
-                                <div class="recent-message d-flex px-4 py-3">
-                                    <div class="avatar avatar-lg">
-                                        <img src="./dist/assets/images/faces/1.jpg">
-                                    </div>
-                                    <div class="name ms-4">
-                                        <h5 class="mb-1">John Dodol</h5>
-                                        <h6 class="text-muted mb-0">@dodoljohn</h6>
-                                    </div>
-                                </div>
-                                <div class="px-4">
-                                    <button class='btn btn-block btn-xl btn-light-primary font-bold mt-3'>Start
-                                        Conversation</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Visitors Profile</h4>
-                            </div>
-                            <div class="card-body">
-                                <div id="chart-visitors-profile"></div>
-                            </div>
-                        </div>
-                    </div> -->
                 </section>
             </div>
 
@@ -708,12 +448,11 @@
 
             // Ler o cookie 'user_id'
             let userId = getCookie('user_id');
+            let nomeuserid = decodeURIComponent(getCookie('nome'));
 
-            if (userId) {
-                console.log("User ID from cookie: " + userId);
-                // Aqui você pode usar o userId conforme necessário
-            } else {
-                console.log("No user ID found in cookies.");
+            $("#nomeusuario").text(nomeuserid)
+
+            if (!userId) {
                 window.location.href = '../index.html';
             }
 
@@ -728,6 +467,9 @@
     </script>
 
     <script type="module" src="../js/gps/coleta.js"></script>
+
+    <script type="module" src="../js/leitura/minhaagenda.js"></script>
+
 </body>
 
 </html>

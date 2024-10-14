@@ -32,16 +32,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Verificar se o usuário é staff
-        if ($user['is_staff'] != 1) {
+        if ($user['is_staff'] != 0) {
             echo "<script>alert('Você não tem permissão para acessar o sistema.'); window.location.href='../index.html';</script>";
             exit();
         }
 
         // Senha correta, criar a sessão do usuário
         $_SESSION['user_id'] = $user['id'];
+        $_SESSION['nome'] = $user['nome'];
 
         // Definir cookie com o ID do usuário
         setcookie('user_id', $user['id'], time() + 43200, '/'); // Cookie válido por 12 horas
+        setcookie('nome', $user['nome'], time() + 43200, '/');
 
         // Atualizar o campo "last_login" com a data e hora atual
         $updateQuery = "UPDATE usuarios SET last_login = :last_login WHERE id = :id";
