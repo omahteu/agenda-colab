@@ -1,3 +1,5 @@
+import {sendErrorLog} from '../log.js'
+
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -36,10 +38,16 @@ function sendPosition(position) {
                 longitude: lon
             },
             success: function(response) {
-                console.log('Location sent successfully: ' + response);
+                console.log('Location sent successfully: ');
             },
             error: function(xhr, status, error) {
-                console.error('Error sending location: ' + error);
+                sendErrorLog(xhr, status, error, {
+                    arquivo: "coleta.js",
+                    linha: 24,  // Linha do código onde o erro ocorreu
+                    funcao_metodo: "sendPosition",
+                    url_requisicao: location.href,
+                    dados_requisicao: 'lat_len_cookie_user_id'
+                });
             }
         });
     } else {
@@ -50,16 +58,40 @@ function sendPosition(position) {
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            alert("User denied the request for Geolocation.");
+            sendErrorLog(xhr, status, error, {
+                arquivo: "coleta.js",
+                linha: 24,  // Linha do código onde o erro ocorreu
+                funcao_metodo: "sendPosition",
+                url_requisicao: location.href,
+                dados_requisicao: 'O usuário negou a solicitação de geolocalização'
+            });
             break;
         case error.POSITION_UNAVAILABLE:
-            alert("Location information is unavailable.");
+            sendErrorLog(xhr, status, error, {
+                arquivo: "coleta.js",
+                linha: 24,  // Linha do código onde o erro ocorreu
+                funcao_metodo: "sendPosition",
+                url_requisicao: location.href,
+                dados_requisicao: 'As informações de localização não estão disponíveis.'
+            });
             break;
         case error.TIMEOUT:
-            alert("The request to get user location timed out.");
+            sendErrorLog(xhr, status, error, {
+                arquivo: "coleta.js",
+                linha: 24,  // Linha do código onde o erro ocorreu
+                funcao_metodo: "sendPosition",
+                url_requisicao: location.href,
+                dados_requisicao: 'A solicitação para obter a localização do usuário expirou.'
+            });
             break;
         case error.UNKNOWN_ERROR:
-            alert("An unknown error occurred.");
+            sendErrorLog(xhr, status, error, {
+                arquivo: "coleta.js",
+                linha: 24,  // Linha do código onde o erro ocorreu
+                funcao_metodo: "sendPosition",
+                url_requisicao: location.href,
+                dados_requisicao: 'Erro desconhecido'
+            });
             break;
     }
 }
